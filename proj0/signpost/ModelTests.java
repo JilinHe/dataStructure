@@ -68,100 +68,100 @@ public class ModelTests {
         assertEquals("Sq has incorrect group number.", group, sq.group());
     }
 
-//    @Test
-//    public void initTest1() {
-//        Model model = new Model(tr(SOLN1));
-//        checkNumbers(tr(BOARD1), model, asList(1, 16));
-//    }
+    @Test
+    public void initTest1() {
+        Model model = new Model(tr(SOLN1));
+        checkNumbers(tr(BOARD1), model, asList(1, 16));
+    }
 
-//    @Test
-//    public void initTest2() {
-//        Model model = new Model(SOLN2);
-//        checkNumbers(BOARD2, model, asList(1, 20));
-//    }
+    @Test
+    public void initTest2() {
+        Model model = new Model(SOLN2);
+        checkNumbers(BOARD2, model, asList(1, 20));
+    }
 
-//    @Test
-//    public void initTest3() {
-//        int[][] soln = tr(SOLN2);
-//        Model model = new Model(soln);
-//        model.solve();
-//        for (int x = 0; x < model.width(); x += 1) {
-//            YLoop:
-//            for (int y = 0; y < model.height(); y += 1) {
-//                for (Sq sq : model) {
-//                    if (x == sq.x && y == sq.y) {
-//                        assertEquals(msg("Wrong number at (%d, %d)", x, y),
-//                                     soln[x][y], sq.sequenceNum());
-//                        continue YLoop;
-//                    }
-//                }
-//                fail(msg("Did not find square at (%d, %d)", x, y));
-//            }
-//        }
-//    }
+    @Test
+    public void initTest3() {
+        int[][] soln = tr(SOLN2);
+        Model model = new Model(soln);
+        model.solve();
+        for (int x = 0; x < model.width(); x += 1) {
+            YLoop:
+            for (int y = 0; y < model.height(); y += 1) {
+                for (Sq sq : model) {
+                    if (x == sq.x && y == sq.y) {
+                        assertEquals(msg("Wrong number at (%d, %d)", x, y),
+                                     soln[x][y], sq.sequenceNum());
+                        continue YLoop;
+                    }
+                }
+                fail(msg("Did not find square at (%d, %d)", x, y));
+            }
+        }
+    }
 
-//    @Test
-//    public void allPlacesTest() {
-//        Model model = new Model(tr(SOLN2));
-//        for (Sq sq : model) {
-//            assertEquals(msg("Wrong square at (%d, %d)", sq.x, sq.y),
-//                         sq, model.get(sq.x, sq.y));
-//            assertEquals(msg("Wrong square at Place %s", sq.pl),
-//                         sq, model.get(sq.pl));
-//            assertEquals(msg("Wrong Place at (%d, %d)", sq.x, sq.y),
-//                         pl(sq.x, sq.y), sq.pl);
-//        }
-//    }
+    @Test
+    public void allPlacesTest() {
+        Model model = new Model(tr(SOLN2));
+        for (Sq sq : model) {
+            assertEquals(msg("Wrong square at (%d, %d)", sq.x, sq.y),
+                         sq, model.get(sq.x, sq.y));
+            assertEquals(msg("Wrong square at Place %s", sq.pl),
+                         sq, model.get(sq.pl));
+            assertEquals(msg("Wrong Place at (%d, %d)", sq.x, sq.y),
+                         pl(sq.x, sq.y), sq.pl);
+        }
+    }
 
-//    @Test
-//    public void arrowTest1() {
-//        Model model = new Model(tr(SOLN1));
-//        checkArrows(tr(ARROWS1), model);
-//    }
+    @Test
+    public void arrowTest1() {
+        Model model = new Model(tr(SOLN1));
+        checkArrows(tr(ARROWS1), model);
+    }
 
-//    @Test
-//    public void copyTest() {
-//        Model model1 = new Model(tr(SOLN1));
-//        Model model2 = new Model(model1);
-//        checkNumbers(tr(BOARD1), model2, asList(1, 16));
-//        for (int x = 0; x < model1.width(); x += 1) {
-//            for (int y = 0; y < model1.height(); y += 1) {
-//                Sq sq1 = model1.get(x, y);
-//                Sq sq2 = model2.get(x, y);
-//                assertFalse("Sq should not be the same instance", sq1 == sq2);
-//                assertTrue("Sq should be equivalent objects", sq1.equals(sq2));
-//            }
-//        }
-//
-//        HashMap<Sq, Sq> model1Sqs = new HashMap<Sq, Sq>();
-//        HashSet<Sq> model2Sqs = new HashSet<Sq>();
-//        for (Sq sq : model1) {
-//            model1Sqs.put(sq, sq);
-//        }
-//        for (Sq sq : model2) {
-//            assertFalse("Sq should not be the same instance",
-//                    sq == model1Sqs.get(sq));
-//            model2Sqs.add(sq);
-//        }
-//        assertSetEquals("Model iterators should have equivalent Sqs",
-//                model1Sqs.keySet(), model2Sqs);
-//    }
+    @Test
+    public void copyTest() {
+        Model model1 = new Model(tr(SOLN1));
+        Model model2 = new Model(model1);
+        checkNumbers(tr(BOARD1), model2, asList(1, 16));
+        for (int x = 0; x < model1.width(); x += 1) {
+            for (int y = 0; y < model1.height(); y += 1) {
+                Sq sq1 = model1.get(x, y);
+                Sq sq2 = model2.get(x, y);
+                assertFalse("Sq should not be the same instance", sq1 == sq2);
+                assertTrue("Sq should be equivalent objects", sq1.equals(sq2));
+            }
+        }
 
-//    @Test
-//    public void solvedTest1() {
-//        Model model = new Model(tr(SOLN1));
-//        assertFalse("Model not solved yet.", model.solved());
-//        model.solve();
-//        assertTrue("Model should be solved.", model.solved());
-//        checkNumbers(tr(SOLN1), model, asList(1, 16));
-//    }
+        HashMap<Sq, Sq> model1Sqs = new HashMap<Sq, Sq>();
+        HashSet<Sq> model2Sqs = new HashSet<Sq>();
+        for (Sq sq : model1) {
+            model1Sqs.put(sq, sq);
+        }
+        for (Sq sq : model2) {
+            assertFalse("Sq should not be the same instance",
+                    sq == model1Sqs.get(sq));
+            model2Sqs.add(sq);
+        }
+        assertSetEquals("Model iterators should have equivalent Sqs",
+                model1Sqs.keySet(), model2Sqs);
+    }
 
-//    @Test
-//    public void autoConnectTest1() {
-//        Model model = new Model(tr(new int[][] { { 1, 2 } }));
-//        model.autoconnect();
-//        assertTrue("Trivial puzzle should be solved at birth.", model.solved());
-//    }
+    @Test
+    public void solvedTest1() {
+        Model model = new Model(tr(SOLN1));
+        assertFalse("Model not solved yet.", model.solved());
+        model.solve();
+        assertTrue("Model should be solved.", model.solved());
+        checkNumbers(tr(SOLN1), model, asList(1, 16));
+    }
+
+    @Test
+    public void autoConnectTest1() {
+        Model model = new Model(tr(new int[][] { { 1, 2 } }));
+        model.autoconnect();
+        assertTrue("Trivial puzzle should be solved at birth.", model.solved());
+    }
 
     /* In sqConnectTest and sqDisconnectTest, we disregard the solution
        board passed into Model and instead instantiate our own squares.
