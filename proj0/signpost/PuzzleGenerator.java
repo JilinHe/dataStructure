@@ -8,7 +8,7 @@ import static signpost.Place.PlaceList;
 import static signpost.Utils.*;
 
 /** A creator of random Signpost puzzles.
- *  @author
+ *  @author Jilin He
  */
 class PuzzleGenerator implements PuzzleSource {
 
@@ -124,7 +124,6 @@ class PuzzleGenerator implements PuzzleSource {
      *  numbered square in the proper direction from START (with the next
      *  number in sequence). */
     static Sq findUniqueSuccessor(Model model, Sq start) {
-        // FIXME: Fill in to satisfy the comment.
         int count = 0;
         for (int i = 0; i < model.width(); i++) {
             for (int j = 0; j < model.height(); j++) {
@@ -143,7 +142,8 @@ class PuzzleGenerator implements PuzzleSource {
         }
         if (start.sequenceNum() != 0) {
             for (Sq temp : model) {
-                if ((start.sequenceNum() + 1 == temp.sequenceNum()) && (start.connectable(temp))) {
+                if ((start.sequenceNum() + 1 == temp.sequenceNum())
+                        && (start.connectable(temp))) {
                     return temp;
                 }
             }
@@ -176,7 +176,6 @@ class PuzzleGenerator implements PuzzleSource {
      *  the only unconnected predecessor.  This is because findUniqueSuccessor
      *  already finds the other cases of numbered, unconnected cells. */
     static Sq findUniquePredecessor(Model model, Sq end) {
-        // FIXME: Replace the following to satisfy the comment.
         int count = 0;
         for (Sq temp: model) {
             if (temp.connectable(end)) {
