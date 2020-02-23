@@ -717,13 +717,7 @@ class Model implements Iterable<Model.Sq> {
                     next._group = newGroup();
                 }
             } else {
-                Sq temp1 = this; int flag = 1; Sq temp3 = this;
-                while (temp1 != null) {
-                    if (temp1._hasFixedNum) {
-                        flag = 0; break;
-                    }
-                    temp1 = temp1._predecessor;
-                }
+                Sq temp3 = this; int flag = check(this);
                 if (flag != 0) {
                     if (this._predecessor == null) {
                         this._group = -1; this._sequenceNum = 0;
@@ -735,16 +729,10 @@ class Model implements Iterable<Model.Sq> {
                         }
                     }
                 }
-                flag = 1; Sq temp2 = next; Sq temp4 = next;
-                while (temp2 != null) {
-                    if (temp2._hasFixedNum) {
-                        flag = 0; break;
-                    }
-                    temp2 = temp2._successor;
-                }
+                Sq temp4 = next; flag = check(next);
                 if (flag != 0) {
                     while (temp4 != null) {
-                        temp4._hasFixedNum = false; temp4._sequenceNum = 0;
+                        temp4._sequenceNum = 0;
                         if (next._successor != null) {
                             if (flag == 1) {
                                 int i = newGroup(); next._group = i;
@@ -763,6 +751,31 @@ class Model implements Iterable<Model.Sq> {
             }
         }
 
+        /**
+         * helper function.
+         * @param temp represents the input of the function
+         * @return int type
+         */
+        public int check(Sq temp) {
+            if (temp._successor == null) {
+                while (temp != null) {
+                    if (temp._hasFixedNum) {
+                        return 0;
+                    }
+                    temp = temp._predecessor;
+                }
+                return 1;
+            } else {
+                while (temp != null) {
+                    if (temp._hasFixedNum) {
+                        return 0;
+                    }
+                    temp = temp._successor;
+                }
+                return 1;
+            }
+        }
+
         @Override
         public boolean equals(Object obj) {
             Sq sq = (Sq) obj;
@@ -774,7 +787,8 @@ class Model implements Iterable<Model.Sq> {
                 && (_predecessor == null) == (sq._predecessor == null)
                 && (_predecessor == null
                     || _predecessor.pl == sq._predecessor.pl)
-                && (_successor == null || _successor.pl == sq._successor.pl);
+                && (_successor == null || _successor.pl
+                    == sq._successor.pl);
         }
 
         @Override
@@ -824,9 +838,8 @@ class Model implements Iterable<Model.Sq> {
     }
 
     /** ASCII denotations of arrows, indexed by direction. */
-    private static final String[] ARROWS = {
-        " *", "NE", "E ", "SE", "S ", "SW", "W ", "NW", "N "
-    };
+    private static final String[]
+            ARROWS = {" *", "NE", "E ", "SE", "S ", "SW", "W ", "NW", "N "};
 
     /** Number of squares that haven't been connected. */
     private int _unconnected;
