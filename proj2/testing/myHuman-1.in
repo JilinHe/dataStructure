@@ -1,0 +1,21 @@
+#*java -ea loa.Main
+# Same as winnable1.inp, but different seed.
+seed 2203312
+manual White
+d1-b3
+h7-f5
+b1-b4
+h5-e5
+c1-a3
+h4-e4
+f1-d3
+h2-f2
+b4-e7
+h3-d3
+a3-d3
+h6-f8
+e1-c3
+dump
+auto Black
+auto White
+#*move/win+

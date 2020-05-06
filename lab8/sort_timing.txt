@@ -1,0 +1,23 @@
+Q: Is one sorting algorithm always faster than another?
+A: No. As for the specific run time it is also depends on the input of the array. When setting the size of the array at around 50-100, all of these algorithm show slight difference. While the sizes increase to 5,000-10,000, the counting sort always shows lowest runtime.
+
+Q: Above we said that BubbleSort, WipingBubbleSort, and InsertionSort each had the same Theta(N^2) asymptotic time complexity. How can you explain the differences in the plots for these three algorithms?
+A: As we run 100 trials with 10 increase per trial and each trial we run 100 times, we get the plot where when size of array is 600, those three sorts run respectively 50, 250, 500 microseconds. In summary, even their time complexity are all theta(N^2), but they hold different coefficient with the size: BubbleSort > WipingBubbleSort > InsertionSort.
+
+Q: What information can we gain from empirical analysis of algorithms which might not be as noticeable in asymptotical bounds?
+A: All of these algorithm are not strictly follow the increasing trend. Because of the size or the specific number in that array, the asymptotical bounds may not be precise enough.
+
+Q: For any given sorting algorithm, does increasing the array size always mean the sorting takes longer?
+A: No, array size is just one of the factors which will impact the time complexity. If the random array has already been sorted, it will always run N times, which is best case and has no business with the size.
+
+Q: How does changing nrepeats change the plot?
+A: The plot will become more smooth, which is close to the asympotical bounds. Through more and more trials,the average results will more and more precise.
+
+Q: Is your plot the exact same as your partner's plot, even with the same values of ntrials, by, and nrepeats?
+A: No.
+
+Q: Optional: Look at the source code for BubbleSorter to WipingBubbleSorter. After looking at the plots, can you intuitively explain why WipingBubbleSorter is usually 2x as fast as BubbleSorter? (Hint: Consider the immobility of some elements when the swapping passes are single directional (i.e. only going forward), and how this "Wiping" strategy helps deal with that issue.) Can you come up with an example that shows the difference in runtime?
+A:
+
+SUMMARY:
+Asymptotical bounds gives us a way to estimate time complexity in mathematics. While by running the program in different ntrials, nrepeats and by, we get better understanding on these factors impact the time complexity: size, specific number and sequence. And with more and more repeats, we get more precise results in the end, which really close to the asymptotical bounds.

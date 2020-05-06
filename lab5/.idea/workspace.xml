@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="87862e6b-0c60-491d-8f86-511b84e1b0b2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1Y3KRwq2kR1PTqrKWtNamp1ux4K" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/cs61b-software/lib/ucb-f2007.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="TestTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestTable" />
+      <module name="lab5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestTable" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87862e6b-0c60-491d-8f86-511b84e1b0b2" name="Default Changelist" comment="" />
+      <created>1582165832474</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582165832474</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="615" y="296" width="735" height="513" key="FileChooserDialogImpl" timestamp="1582267357144">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="615" y="296" width="735" height="513" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1582267357144" />
+    <state width="1807" height="458" key="GridCell.Tab.0.bottom" timestamp="1582267289107">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="458" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1582267289107" />
+    <state width="1807" height="458" key="GridCell.Tab.0.center" timestamp="1582267289096">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="458" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1582267289096" />
+    <state width="1807" height="458" key="GridCell.Tab.0.left" timestamp="1582267289096">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="458" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1582267289096" />
+    <state width="1807" height="458" key="GridCell.Tab.0.right" timestamp="1582267289106">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="458" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1582267289106" />
+    <state x="579" y="207" width="819" height="691" key="NewModule_or_Project.wizard" timestamp="1582267377096">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="579" y="207" width="819" height="691" key="NewModule_or_Project.wizard/67.27.1853.1053@67.27.1853.1053" timestamp="1582267377096" />
+    <state x="476" y="130" width="1024" height="845" key="SettingsEditor" timestamp="1582165920836">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="476" y="130" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1582165920836" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1582267335278">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1582267335278" />
+  </component>
+</project>

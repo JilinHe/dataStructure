@@ -1,0 +1,35 @@
+# My 02 test is to test rm, status
+I setup2.inc
+> rm f.txt
+<<<
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+
+=== Removed Files ===
+f.txt
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+<<<
++ b.txt b.txt
+> add b.txt
+<<<
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+b.txt
+
+=== Removed Files ===
+f.txt
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+b.txt
+<<<
